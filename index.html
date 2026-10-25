@@ -66,6 +66,10 @@
   }
   </script>
 
+  <!-- GoatCounter Analytics -->
+  <script data-goatcounter="https://indiaranks.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+
   <style>
     :root {
       --bg-dark: #081522;
@@ -89,37 +93,29 @@
       flex-direction: column;
     }
 
+    /* Minimal, Subtle Sticky Header */
     header {
-      padding: 32px 20px;
+      padding: 12px 20px;
       text-align: center;
-      background: rgba(16, 40, 59, 0.8);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border-color);
+      background: rgba(8, 21, 34, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(48, 73, 95, 0.5);
       position: sticky;
       top: 0;
       z-index: 100;
     }
 
-    header h1 {
-      font-size: 36px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      background: linear-gradient(90deg, #ffffff, var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    header p {
-      margin-top: 6px;
-      color: var(--text-secondary);
-      font-size: 15px;
+    .brand {
+      font-size: 16px;
       font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     main {
       width: min(800px, 92%);
-      margin: 40px auto;
+      margin: 32px auto;
       flex: 1;
     }
 
@@ -244,7 +240,7 @@
     }
 
     @media (max-width: 480px) {
-      header h1 { font-size: 28px; }
+      .brand { font-size: 14px; }
       .video-info { padding: 16px 18px; }
       .video-info h2 { font-size: 18px; }
       .dmca { padding: 18px; }
@@ -253,9 +249,9 @@
 </head>
 
 <body>
+  <!-- Minimal Sticky Header -->
   <header>
-    <h1>IndiaRanks.com</h1>
-    <p>by NS Entertainment</p>
+    <span class="brand">IndiaRanks.com</span>
   </header>
 
   <main>
@@ -265,7 +261,8 @@
          href="https://articleweb.xyz/vid/video.php?id=t8OmZuvlFtH2"
          target="_blank"
          rel="noopener noreferrer"
-         title="Watch MTV Roadies Rebirth Season 21 Episode 4">
+         title="Watch MTV Roadies Rebirth Season 21 Episode 4"
+         onclick="if(window.goatcounter) goatcounter.count({path: '/click/episode-4', title: 'External Click: Episode 4', event: true});">
         <div class="card-image-wrapper">
           <img src="4.jpg" alt="MTV Roadies Rebirth Season 21 Episode 4 thumbnail" loading="lazy">
         </div>
@@ -282,7 +279,8 @@
          href="https://articleweb.xyz/vid/video.php?id=AHP2uzZ2E24z"
          target="_blank"
          rel="noopener noreferrer"
-         title="Watch MTV Roadies Rebirth Season 21 Episode 3">
+         title="Watch MTV Roadies Rebirth Season 21 Episode 3"
+         onclick="if(window.goatcounter) goatcounter.count({path: '/click/episode-3', title: 'External Click: Episode 3', event: true});">
         <div class="card-image-wrapper">
           <img src="3.jpg" alt="MTV Roadies Rebirth Season 21 Episode 3 thumbnail" loading="lazy">
         </div>
@@ -299,7 +297,8 @@
          href="https://articleweb.xyz/vid/video.php?id=Y5lC5EvJLq3ZE"
          target="_blank"
          rel="noopener noreferrer"
-         title="Watch MTV Roadies Rebirth Season 21 Episode 2">
+         title="Watch MTV Roadies Rebirth Season 21 Episode 2"
+         onclick="if(window.goatcounter) goatcounter.count({path: '/click/episode-2', title: 'External Click: Episode 2', event: true});">
         <div class="card-image-wrapper">
           <img src="2.jpg" alt="MTV Roadies Rebirth Season 21 Episode 2 thumbnail" loading="lazy">
         </div>
@@ -316,7 +315,8 @@
          href="https://articleweb.xyz/vid/video.php?id=CnBthfXQ7CDbN"
          target="_blank"
          rel="noopener noreferrer"
-         title="Watch MTV Roadies Rebirth Season 21 Episode 1">
+         title="Watch MTV Roadies Rebirth Season 21 Episode 1"
+         onclick="if(window.goatcounter) goatcounter.count({path: '/click/episode-1', title: 'External Click: Episode 1', event: true});">
         <div class="card-image-wrapper">
           <img src="1.jpg" alt="MTV Roadies Rebirth Season 21 Episode 1 thumbnail" loading="lazy">
         </div>
