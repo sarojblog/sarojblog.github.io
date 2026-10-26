@@ -56,7 +56,6 @@
       --bg-card: rgba(20, 40, 58, 0.6);
       --border-color: rgba(48, 73, 95, 0.8);
       --accent: #42c5ff;
-      --accent-glow: rgba(66, 197, 255, 0.25);
       --text-primary: #f5f7fa;
       --text-secondary: #bacbd9;
       --warning-bg: rgba(255, 183, 77, 0.1);
@@ -121,16 +120,14 @@
     .player-wrapper {
       position: relative;
       width: 100%;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 16 / 9; /* Ensures height="100%" works perfectly */
       background: #000;
     }
 
     .player-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      display: block;
+      /* Width and height are handled by the inline 100% attributes, 
+         this just ensures no extra borders or spacing interfere */
       border: none;
     }
 
@@ -188,7 +185,7 @@
 
     @media (max-width: 480px) {
       .brand { font-size: 14px; }
-      .disclaimer { padding: 16px; font-size: 13px; }
+      .disclaimer { padding: 16px; font-size: 13px; flex-direction: column; gap: 8px; }
     }
   </style>
 </head>
@@ -203,14 +200,8 @@
     <!-- Video Player -->
     <div class="player-container">
       <div class="player-wrapper">
-        <iframe 
-          id="player" 
-          src="https://damitv.st/embed/?id=mm-npl-live" 
-          frameborder="0" 
-          scrolling="no" 
-          allowfullscreen
-          title="Live Cricket Stream">
-        </iframe>
+        <!-- EXACT IFRAME AS REQUESTED -->
+        <iframe id="player" src="https://damitv.st/embed/?id=mm-npl-live" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen></iframe>
       </div>
     </div>
 
